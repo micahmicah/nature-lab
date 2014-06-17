@@ -8,4 +8,4 @@ exclude:
   - "*.command"
   - README.md
   - "assets/style/scss/*"
-baseurl: /web-starter
+baseurl: /nature-lab

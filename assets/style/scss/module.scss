@@ -1,0 +1,31 @@
+.flood{
+	width:100%;
+	max-height:760px;
+	background:rgb(240,240,240);
+	z-index:1;
+
+}
+
+.hero-image{
+	position:relative;
+	z-index:1;
+}
+
+.logo{
+	position:absolute;
+	z-index:2;
+	top:1em;
+	text-align:center;
+	width:100%;
+}
+
+.bone{
+	width:100%;
+	max-height:744%;
+	background:rgb(240,240,240);
+}
+
+.news-module{
+	text-align:center;
+}
+
