@@ -6,6 +6,10 @@
 	 }
 }
 
+p, li, h1, h2, h3, h4{
+	-webkit-font-smoothing:antialiased;
+}
+
 p, li{
 	font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', times, serif; 
 	font-weight: 400; 
@@ -33,4 +37,33 @@ p, li{
 h2,h3{
 	font-family:times, serif;
 	font-weight:normal;
+}
+
+p:first-child{
+	margin-bottom:0em;
+	text-indent:0em;
+}
+
+p + p{
+	margin-top:0em;
+	text-indent:1.5em;
+}
+
+p .intro{
+	font-family: 'Mercury Text G1 SC A', 'Mercury Text G1 SC B'; 
+	font-weight: 600; 
+	font-style: normal;
+	letter-spacing:1px;
+}
+
+
+.entry-meta-data ul{
+	list-style:none;
+	font-family:courier, monospace;
+}
+
+
+.entry-meta-data ul li{
+	font-family:courier, monospace;
+	font-size:14px;
 }
