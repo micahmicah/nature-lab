@@ -17,3 +17,26 @@ body{
 .entry-meta-data ul li{
 	color:rgb(100,100,100);
 }
+
+.collection{
+	border-bottom:1px solid black;
+	margin-bottom:10em;
+}
+
+
+.history{
+	background:url('../../img/diagrams.jpg');
+	background-repeat:no-repeat;
+	background-position:105% 70%;
+	background-size:380px auto;
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		background-size:280px auto;
+	}
+	@media only screen and (max-width: 767px) and (min-width: 480px){
+		background-size:380px auto;
+		background-position:170% 70%;
+	}
+	@media only screen and (max-width: 767px){
+		background:none;
+	}
+}

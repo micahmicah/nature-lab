@@ -9,18 +9,20 @@
 .flood{
 	width:100%;
 	// max-height:760px;
-	background:url('assets/img/nature-lab-header.jpg');
 	background:rgb(240,240,240);
 	z-index:1;
 	margin:10em 0em;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
 
 }
 
 .hero-image{
 	max-width:100%;
 	height:760px;
-	background:url('../../img/nature-lab-header.jpg');
-	background:rgb(240,240,240);
+	background:url('../../img/nature-lab-hero.jpg');
+	background-position:-180px -400px;
+	// background:rgb(240,240,240);
 	z-index:1;
 }
 
@@ -53,27 +55,58 @@
 	width:100%;
 	text-shadow:0px 0px 80px black;
 	color:white;
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		// width:500px;
+	}
 }
 
 .logo .title{
 	display:inline-block;
-	border-bottom:2px solid white;
-	border-top:2px solid white;
+	border-bottom:1px solid white;
+	border-top:1px solid white;
 	padding:0em 1em;
+
+
+}
+
+.logo svg{
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		width:500px;
+		height:100px;
+	}
+
+	@media only screen and (max-width: 500px){
+		width:200px;
+	}
+
+	@media only screen and (max-width: 767px) and (min-width: 480px){
+		width:400px;
+	}
+
+}
+
+.logo svg g path{
+	fill:white;
+	box-shadow:0px 0px 80px black;
 }
 
 .logo .subtitle{
-	font-size:14px;
+	font-size:16px;
 	font-family:courier, monospace;
 	letter-spacing:0.125em;
 	font-weight:normal;
 	display:block;
+	text-shadow:0px 0px 30px black;
 }
 
+.author-portrait{
+	border-radius:50%;
+}
 
 // news module
 .news-module{
 	text-align:center;
+	margin:6em auto;
 }
 
 .news-module p{
@@ -100,6 +133,11 @@
 	position:fixed;
 	width:100%;
 	z-index:99;
+	top:-10em;
+	-webkit-transition:top 0.3s ease-in-out;
+}
+
+.drawer{
 	top:0em;
 }
 
@@ -107,6 +145,9 @@
 	margin-top:0em;
 }
 
+.main-nav h1{
+	margin-bottom:0em;
+}
 .main-nav h1, .main-nav ul, .main-nav ul li{
 	float:left;
 }
@@ -173,6 +214,14 @@
 	max-width:100%;
 }
 
+.collection h3{
+	margin:0em;
+}
+
+
+.collection.row{
+	margin:6em auto;
+}
 
 
 
@@ -186,6 +235,14 @@
 	margin:6em 0em;
 }
 
+/*
+// Contact
+-------------------------------------------------------
+*/
+
+.contact p{
+	text-indent:0em;
+}
 
 
 /*

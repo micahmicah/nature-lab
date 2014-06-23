@@ -8,6 +8,7 @@
 
 p, li, h1, h2, h3, h4{
 	-webkit-font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
 }
 
 p, li{
@@ -16,6 +17,12 @@ p, li{
 	font-style: normal;
 	font-size:19px;
 	line-height:28px;
+}
+
+p strong{
+	font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', times, serif; 
+	font-weight: 600; 
+	font-style: normal;
 }
 
 .footer p{
@@ -66,4 +73,8 @@ p .intro{
 .entry-meta-data ul li{
 	font-family:courier, monospace;
 	font-size:14px;
+}
+
+.collection h3{
+	font-size:48px;
 }
