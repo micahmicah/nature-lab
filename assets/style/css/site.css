@@ -894,7 +894,6 @@ p .intro {
 */
 .flood {
   width: 100%;
-  max-height: 760px;
   background: url("assets/img/nature-lab-header.jpg");
   background: #f0f0f0;
   z-index: 1;
@@ -984,7 +983,8 @@ p .intro {
 
 .pull-quote {
   background: url("../../img/fish_01.jpg") no-repeat right, url("../../img/fish_02.jpg") no-repeat left;
-  background-size: 230px auto; }
+  background-size: 230px auto;
+  margin: 10em auto; }
 
 .pull-quote:before {
   content: "";
@@ -1002,7 +1002,7 @@ p .intro {
   background-size: 180px auto;
   width: 170px;
   height: 86px;
-  margin: -72px auto 100px auto; }
+  margin: -72px auto 0px auto; }
 
 /*
 // Collections
