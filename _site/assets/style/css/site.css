@@ -850,6 +850,23 @@ p, li {
   font-size: 12px;
   text-align: center; }
 
+.pull-quote h3 {
+  font-size: 72px;
+  line-height: 1em;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0em;
+  font-family: times, serif; }
+
+h2, h3 {
+  font-family: times, serif;
+  font-weight: normal; }
+
+/*
+// page structure
+-------------------------------------------------------
+*/
 .flood {
   width: 100%;
   max-height: 760px;
@@ -864,27 +881,45 @@ p, li {
   background: #f0f0f0;
   z-index: 1; }
 
-.container {
-  margin-top: 5em; }
-
 .hero-image {
   position: relative;
   z-index: 1; }
+
+.texture-specimens {
+  width: 100%;
+  height: 455px;
+  background: #f8faff; }
+
+.container {
+  margin-top: 5em; }
 
 .logo {
   position: absolute;
   z-index: 2;
   top: 1em;
   text-align: center;
-  width: 100%; }
-
-.bone {
   width: 100%;
-  max-height: 744%;
-  background: #f0f0f0; }
+  text-shadow: 0px 0px 80px black;
+  color: white; }
+
+.logo .title {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  padding: 0em 1em; }
+
+.logo .subtitle {
+  font-size: 14px;
+  font-family: courier, monospace;
+  letter-spacing: 0.125em;
+  font-weight: normal;
+  display: block; }
 
 .news-module {
   text-align: center; }
+
+.news-module p {
+  color: white; }
 
 .news-entry {
   border-bottom: 1px dotted black; }
@@ -893,12 +928,17 @@ p, li {
   text-align: center; }
 
 /*
-
+// Main Navigation
+-------------------------------------------------------
 */
 .main-nav {
   position: fixed;
+  width: 100%;
   z-index: 99;
   top: 0em; }
+
+.main-nav .container {
+  margin-top: 0em; }
 
 .main-nav h1, .main-nav ul, .main-nav ul li {
   float: left; }
@@ -906,6 +946,42 @@ p, li {
 .main-nav ul li {
   margin-right: 1em; }
 
+.main-nav ul {
+  margin-top: 2em; }
+
+.main-nav a:link, .main-nav a:visited {
+  text-decoration: none;
+  color: black; }
+
+.main-nav .active {
+  border-bottom: 3px solid black; }
+
+.pull-quote {
+  background: url("../../img/fish_01.jpg") no-repeat right, url("../../img/fish_02.jpg") no-repeat left;
+  background-size: 230px auto; }
+
+.pull-quote:before {
+  content: "";
+  background: url("../../img/orb-01.jpg");
+  display: block;
+  background-size: 180px auto;
+  width: 170px;
+  height: 90px;
+  margin: 0px auto -155px auto; }
+
+.pull-quote:after {
+  content: "";
+  background: url("../../img/orb-02.jpg");
+  display: block;
+  background-size: 180px auto;
+  width: 170px;
+  height: 86px;
+  margin: -72px auto 100px auto; }
+
+/*
+// Collections
+-------------------------------------------------------
+*/
 .news-module {
   width: 340px;
   height: 340px;
@@ -913,6 +989,9 @@ p, li {
   border-radius: 50%; }
 
 body {
-  background: #f7f8eb; }
+  background: #fcfcfc; }
+
+.main-nav {
+  background: #fcfcfc; }
 
 /*# sourceMappingURL=site.css.map */

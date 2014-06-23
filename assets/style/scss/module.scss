@@ -1,3 +1,11 @@
+
+
+/*
+// page structure
+-------------------------------------------------------
+*/
+
+// images
 .flood{
 	width:100%;
 	max-height:760px;
@@ -15,14 +23,26 @@
 	z-index:1;
 }
 
-.container{
-	margin-top:5em;
-}
-
 .hero-image{
 	position:relative;
 	z-index:1;
 }
+
+
+.texture-specimens{
+	width:100%;
+	height:455px;
+	background:rgb(248, 250, 255);
+
+}
+
+
+.container{
+	margin-top:5em;
+}
+
+
+// logo intro
 
 .logo{
 	position:absolute;
@@ -30,19 +50,34 @@
 	top:1em;
 	text-align:center;
 	width:100%;
+	text-shadow:0px 0px 80px black;
+	color:white;
 }
 
-.bone{
-	width:100%;
-	max-height:744%;
-	background:rgb(240,240,240);
+.logo .title{
+	display:inline-block;
+	border-bottom:2px solid white;
+	border-top:2px solid white;
+	padding:0em 1em;
 }
 
+.logo .subtitle{
+	font-size:14px;
+	font-family:courier, monospace;
+	letter-spacing:0.125em;
+	font-weight:normal;
+	display:block;
+}
+
+
+// news module
 .news-module{
 	text-align:center;
 }
 
-
+.news-module p{
+	color:white;
+}
 
 .news-entry{
 	border-bottom:1px dotted black;
@@ -52,15 +87,23 @@
 	text-align:center;
 }
 
-// Main Navigation
-/*
 
+
+
+/*
+// Main Navigation
+-------------------------------------------------------
 */
 
 .main-nav{
 	position:fixed;
+	width:100%;
 	z-index:99;
 	top:0em;
+}
+
+.main-nav .container{
+	margin-top:0em;
 }
 
 .main-nav h1, .main-nav ul, .main-nav ul li{
@@ -70,6 +113,58 @@
 .main-nav ul li{
 	margin-right:1em;
 }
+
+.main-nav ul{
+	margin-top:2em;
+}
+
+.main-nav a:link, .main-nav a:visited{
+	text-decoration:none;
+	color:black;
+}
+
+.main-nav .active{
+	border-bottom:3px solid black;
+}
+
+
+
+// pull quote
+.pull-quote{
+	background:url('../../img/fish_01.jpg') no-repeat right,
+			   url('../../img/fish_02.jpg') no-repeat left;
+   background-size:230px auto;
+	
+}
+
+.pull-quote:before{
+	content:"";
+	background:url('../../img/orb-01.jpg');
+	display:block;
+	background-size:180px auto;
+	width:170px;
+	height:90px;
+	// position:absolute;
+	margin:0px auto -155px auto;
+
+}
+
+.pull-quote:after{
+	content:"";
+	background:url('../../img/orb-02.jpg');
+	display:block;
+	background-size:180px auto;
+	width:170px;
+	height:86px;
+	// position:absolute;
+	margin:-72px auto 100px auto;
+}
+
+
+/*
+// Collections
+-------------------------------------------------------
+*/
 
 
 
