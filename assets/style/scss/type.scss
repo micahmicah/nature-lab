@@ -6,12 +6,12 @@
 	 }
 }
 
-p, li, h1, h2, h3, h4{
+p, li, h1, h2, h3, h4, input{
 	-webkit-font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
 
-p, li{
+p, li, input{
 	font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', times, serif; 
 	font-weight: 400; 
 	font-style: normal;

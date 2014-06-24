@@ -838,11 +838,11 @@ or wrap each row of columns in a <div class="row"> */
     .logo {
       font-size: 64px; } }
 
-p, li, h1, h2, h3, h4 {
+p, li, h1, h2, h3, h4, input {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-p, li {
+p, li, input {
   font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', times, serif;
   font-weight: 400;
   font-style: normal;
@@ -915,6 +915,11 @@ p .intro {
   background: url("../../img/nature-lab-hero.jpg");
   background-position: -180px -400px;
   z-index: 1; }
+  @media only screen and (max-width: 959px) and (min-width: 768px) {
+    .hero-image {
+      background: url("../../img/nature-lab-header-02.jpg");
+      background-size: 1900px auto;
+      background-position: -600px -350px; } }
 
 .hero-image {
   position: relative;
@@ -967,7 +972,8 @@ p .intro {
   text-shadow: 0px 0px 30px black; }
 
 .author-portrait {
-  border-radius: 50%; }
+  border-radius: 50%;
+  -webkit-filter: sepia(1) grayscale(0.6) contrast(0.7); }
 
 .news-module {
   text-align: center;
@@ -1060,6 +1066,16 @@ p .intro {
 */
 .news-story {
   margin: 6em 0em; }
+
+input[type=search] {
+  border: 1px solid black;
+  padding: 0.125em 0.25em; }
+
+input[type=search]:focus {
+  box-shadow: none;
+  outline-color: none;
+  outline-width: 0px;
+  outline-style: none; }
 
 /*
 // Contact

@@ -24,6 +24,12 @@
 	background-position:-180px -400px;
 	// background:rgb(240,240,240);
 	z-index:1;
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		background:url('../../img/nature-lab-header-02.jpg');
+		background-size:1900px auto;
+		background-position:-600px -350px;
+
+	}
 }
 
 .hero-image{
@@ -101,6 +107,7 @@
 
 .author-portrait{
 	border-radius:50%;
+	-webkit-filter:sepia(1) grayscale(0.6) contrast(0.7);
 }
 
 // news module
@@ -233,6 +240,19 @@
 
 .news-story{
 	margin:6em 0em;
+}
+
+input[type=search]{
+	border:1px solid black;
+	padding:0.125em 0.25em;
+}
+
+input[type=search]:focus{
+	// background:black;
+	box-shadow:none;
+	outline-color:none;
+	outline-width:0px;
+	outline-style:none;
 }
 
 /*
