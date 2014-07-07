@@ -39,6 +39,9 @@ p strong{
 	border-bottom:1px solid black;
 	padding:0.5em 0em;
 	font-family:times, serif;
+	@media only screen and (min-width:1600px) {
+		font-size:96px;
+	}
 }
 
 h2,h3{
@@ -77,4 +80,5 @@ p .intro{
 
 .collection h3{
 	font-size:48px;
+
 }

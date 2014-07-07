@@ -185,6 +185,14 @@
 			   url('../../img/fish_02.jpg') no-repeat left;
    background-size:230px auto;
    margin:10em auto;
+   @media only screen and (min-width:1600px) {
+		background-size:330px auto;
+	}
+
+	@media only screen and (max-width: 767px) {
+		background:none;
+
+	}
 	
 }
 
@@ -197,6 +205,14 @@
 	height:90px;
 	// position:absolute;
 	margin:0px auto -155px auto;
+	@media only screen and (min-width:1600px) {
+		background-size: 266px auto;
+		width: 250px;
+		height: 129px;
+		margin: 0px auto -176px auto;
+	}
+
+	
 
 }
 
@@ -209,6 +225,13 @@
 	height:86px;
 	// position:absolute;
 	margin:-72px auto 0px auto;
+	@media only screen and (min-width:1600px) {
+		background-size: 266px auto;
+		width: 250px;
+		height: 129px;
+		margin: -97px auto 0px auto;
+
+	}
 }
 
 
