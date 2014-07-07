@@ -467,7 +467,8 @@ table {
   position: relative;
   width: 960px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  background: yellow; }
 
 .container .column,
 .container .columns {
@@ -587,6 +588,14 @@ table {
 .container .offset-by-fifteen {
   padding-left: 900px; }
 
+/* #Desktop (Large)
+================================================== */
+@media only screen and (min-width: 1400px) {
+  .container {
+    width: 1100px; } }
+@media only screen and (min-width: 1600px) {
+  .container {
+    width: 1400px; } }
 /* #Tablet (Portrait)
 ================================================== */
 /* Note: Design for a width of 768px */
@@ -913,7 +922,8 @@ p .intro {
   max-width: 100%;
   height: 760px;
   background: url("../../img/nature-lab-hero.jpg");
-  background-position: -180px -400px;
+  background-size: cover;
+  background-position: -0px -200px;
   z-index: 1; }
   @media only screen and (max-width: 959px) and (min-width: 768px) {
     .hero-image {
@@ -1127,18 +1137,7 @@ body {
     .history {
       background: none; } }
 
-/*
- * jQuery FlexSlider v2.2.0
- * http://www.woothemes.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- */
-/* Browser Resets
-*********************************/
+x
 .flex-container a:active,
 .flexslider a:active,
 .flex-container a:focus,
@@ -1204,17 +1203,7 @@ html[xmlns] .slides {
 *********************************/
 .flexslider {
   margin: 0 0 60px;
-  background: #fff;
-  border: 4px solid #fff;
   position: relative;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   zoom: 1; }
 
 .flex-viewport {

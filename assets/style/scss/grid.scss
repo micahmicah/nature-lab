@@ -21,7 +21,7 @@
 /* #Base 960 Grid
 ================================================== */
 
-    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; background:yellow;}
     .container .column,
     .container .columns                         { float: left; margin-left: 10px; margin-right: 10px; }
     .row                                        { margin-bottom: 20px; }
@@ -70,12 +70,33 @@
     .container .offset-by-fifteen               { padding-left: 900px; }
 
 
+/* #Desktop (Large)
+================================================== */
+@media only screen and (min-width:1400px) {
+        .container{
+            width:1100px;
+            
+        }
+
+        .container {
+
+        }
+    }
+
+@media only screen and (min-width:1600px) {
+        .container{
+            width:1400px;
+        }
+
+}
 
 /* #Tablet (Portrait)
 ================================================== */
 
-    /* Note: Design for a width of 768px */
+    
+    
 
+    /* Note: Design for a width of 768px */
     @media only screen and (min-width: 768px) and (max-width: 959px) {
         .container                                  { width: 768px; }
         .container .column,
