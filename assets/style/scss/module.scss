@@ -31,6 +31,23 @@
 		background-position:-600px -350px;
 
 	}
+	@media only screen and (min-height:650px){
+		height:650px;
+		background-position:-0px -220px;
+	}
+	@media only screen and (min-height:800px) {
+		height:800px;
+		background-position:-0px -140px;
+		
+		.logo{
+			top:2em;
+		}
+	}
+	@media only screen and (min-height:900px) {
+		height:900px;
+		background-size:cover;
+	}
+
 }
 
 .hero-image{
@@ -41,8 +58,8 @@
 
 .texture-specimens{
 	width:100%;
-	height:455px;
-	background:rgb(248, 250, 255);
+	// height:455px;
+	// background:rgb(248, 250, 255);
 
 }
 

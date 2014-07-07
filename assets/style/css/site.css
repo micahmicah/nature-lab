@@ -673,7 +673,10 @@ table {
     padding-left: 4.255285714286%; }
 
   .container .offset-by-three {
-    padding-left: 17.021285714286%; } }
+    padding-left: 239px; }
+
+  .container .offset-by-five {
+    padding-left: 417px; } }
 /* #Tablet (Portrait)
 ================================================== */
 /* Note: Design for a width of 768px */
@@ -1011,15 +1014,27 @@ p .intro {
       background: url("../../img/nature-lab-header-02.jpg");
       background-size: 1900px auto;
       background-position: -600px -350px; } }
+  @media only screen and (min-height: 650px) {
+    .hero-image {
+      height: 650px;
+      background-position: -0px -220px; } }
+  @media only screen and (min-height: 800px) {
+    .hero-image {
+      height: 800px;
+      background-position: -0px -140px; }
+      .hero-image .logo {
+        top: 2em; } }
+  @media only screen and (min-height: 900px) {
+    .hero-image {
+      height: 900px;
+      background-size: cover; } }
 
 .hero-image {
   position: relative;
   z-index: 1; }
 
 .texture-specimens {
-  width: 100%;
-  height: 455px;
-  background: #f8faff; }
+  width: 100%; }
 
 .container {
   margin-top: 5em; }
@@ -1271,8 +1286,10 @@ x
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {
-  width: 100%;
-  display: block; }
+  max-width: 100%;
+  display: block;
+  max-height: 100%;
+  margin: 0 auto; }
 
 .flex-pauseplay span {
   text-transform: capitalize; }
