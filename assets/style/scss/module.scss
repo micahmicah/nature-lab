@@ -53,6 +53,9 @@
 .hero-image{
 	position:relative;
 	z-index:1;
+	@media only screen and (min-width:1400px){
+		z-index:100;
+	}
 }
 
 
@@ -158,13 +161,31 @@
 	position:fixed;
 	width:100%;
 	z-index:99;
-	top:-10em;
+	top:0em;
 	-webkit-transition:top 0.3s ease-in-out;
+	@media only screen and (min-width:1400px){
+		background:none;
+		width:20%;
+		ul.columns li{
+			float:none;
+		}
+		.columns{
+			float:none;
+		}
+		.offset-by-one{
+			padding-left:0px;
+		}
+	} 
 }
 
-.drawer{
+.nav-up{
+	top:-80px;
+}
+
+.nav-down{
 	top:0em;
 }
+
 
 .main-nav .container{
 	margin-top:0em;
