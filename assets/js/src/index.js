@@ -8,6 +8,8 @@
 // 	}
 // });
 
+
+
 console.log($('p').text());
 
 $(window).load(function() {
@@ -16,6 +18,9 @@ $(window).load(function() {
   });
 });
 
+$(function(){
+    $('.item').draggable();
+});
 
 // Hide Header on on scroll down
 var didScroll;
@@ -55,3 +60,12 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+
+
+var container = document.querySelector('#container');
+var msnry = new Masonry( container, {
+  // options
+  columnWidth: 200,
+  itemSelector: '.item'
+});

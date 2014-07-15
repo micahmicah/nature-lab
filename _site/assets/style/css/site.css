@@ -1200,6 +1200,18 @@ p .intro {
 .collection.row {
   margin: 6em auto; }
 
+.item, .grid-sizer {
+  width: 25%; }
+
+.item img {
+  max-width: 100%; }
+
+.item.w2 {
+  width: 50%; }
+
+.item.w4 {
+  width: 100%; }
+
 /*
 // News
 -------------------------------------------------------
