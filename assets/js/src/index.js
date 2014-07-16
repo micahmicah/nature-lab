@@ -8,6 +8,8 @@
 // 	}
 // });
 
+var Lightbox = require('./lightbox')();
+
 function setupFlexslider () {
     if (!$('.flexslider').length) return;
 
@@ -64,7 +66,7 @@ function setupPackery () {
 
     var pckry = new Packery( container, {
       // options
-      columnWidth: 200,
+      // columnWidth: 200,
       itemSelector: '.item'
     });
 
@@ -82,6 +84,7 @@ function NatureLab() {
         setupHidingNavOnScroll();
         setupFlexslider();
         setupPackery();
+        Lightbox.initialize();
 
         return self;
     };

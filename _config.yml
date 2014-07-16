@@ -8,4 +8,5 @@ exclude:
   - "*.command"
   - README.md
   - "assets/style/scss/*"
+  - "assets/js/src/*"
 baseurl: /nature-lab

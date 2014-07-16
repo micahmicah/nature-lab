@@ -27,13 +27,23 @@ body:after {
 
 .lightbox .lb-image {
   display: block;
-  height: auto;
-  max-width: inherit;
+  position: relative;
+  margin: 0 auto;
   /*-webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;*/
+}
+.lb-container .landscape {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.lb-container .portrait {
+  width: auto;
+  height: 100%;
+  max-height: 100%;
 }
 
 .lightbox a img {
@@ -207,4 +217,8 @@ body:after {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+.lightbox-open {
+  overflow: hidden;
 }
