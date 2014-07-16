@@ -27888,8 +27888,7 @@ var hyperspace = require('hyperspace');
 
 module.exports = function lightbox () {
     var self = {},
-        body_sel = d3.select('body'),
-        current_lightbox;
+        body_sel = d3.select('body');
 
     var hs = hyperspace(html, function (row) {
         return {
@@ -27907,17 +27906,10 @@ module.exports = function lightbox () {
                 var image_src = clicked.attr('href');
                 self.render({ src: image_src });
             });
-
-        d3.select(window)
-            .on('resize', function () {
-                set_lightbox_wrapper_dimensions(current_lightbox);
-            });
     };
 
     self.render = function (data) {
         hs.on('element', function (element) {
-            current_lightbox = element;
-            set_lightbox_wrapper_dimensions(element);
 
             d3.select(element)
                 .on('click', function () {
@@ -27933,14 +27925,6 @@ module.exports = function lightbox () {
     function close (element) {
         d3.select(element).remove();
         body_sel.classed('lightbox-open', false);
-        current_element = undefined;
-    }
-
-    function set_lightbox_wrapper_dimensions (element) {
-        if (!element) return;
-        var wrapper = d3.select(element).select('.lightbox-wrapper');
-        wrapper.style('width', window.innerWidth + 'px');
-        wrapper.style('height', window.innerHeight + 'px');
     }
 
     return self;
