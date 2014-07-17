@@ -1542,6 +1542,16 @@ p .intro {
   z-index: 99;
   top: 0em;
   -webkit-transition: top 0.3s ease-in-out; }
+  @media only screen and (min-width: 1400px) {
+    .main-nav {
+      background: none;
+      width: 20%; }
+      .main-nav ul.columns li {
+        float: none; }
+      .main-nav .columns {
+        float: none; }
+      .main-nav .offset-by-one {
+        padding-left: 0px; } }
 
 .nav-up {
   top: -80px; }
