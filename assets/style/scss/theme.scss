@@ -24,6 +24,13 @@ body{
 }
 
 
+.dark{
+	background:rgb(0,0,0);
+	h3, p{
+		color:rgb(252,252,252);
+	}
+}
+
 .history{
 	background:url('../../img/diagrams.jpg');
 	background-repeat:no-repeat;

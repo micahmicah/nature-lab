@@ -1663,6 +1663,9 @@ p .intro {
   max-height: 100%;
   max-width: 100%; }
 
+.moving-specimen {
+  max-width: 100%; }
+
 /*
 // News
 -------------------------------------------------------
@@ -1713,6 +1716,11 @@ body {
 .collection {
   border-bottom: 1px solid black;
   margin-bottom: 10em; }
+
+.dark {
+  background: black; }
+  .dark h3, .dark p {
+    color: #fcfcfc; }
 
 .history {
   background: url("../../img/diagrams.jpg");
