@@ -1670,8 +1670,8 @@ p .intro {
   max-height: 100%;
   max-width: 100%; }
 
-.moving-specimen {
-  max-width: 100%; }
+.moving-specimen, .moving-specimen source {
+  width: 100%; }
 
 /*
 // News
