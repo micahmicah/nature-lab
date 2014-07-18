@@ -68,15 +68,25 @@ p .intro{
 }
 
 
-.entry-meta-data ul{
+.headline{
+	font-size:28px;
+	line-height:1.33333em;
+}
+
+
+.news-meta-data ul{
 	list-style:none;
 	font-family:courier, monospace;
 }
 
 
-.entry-meta-data ul li{
+.news-meta-data ul li{
 	font-family:courier, monospace;
 	font-size:14px;
+}
+
+.news-headline{
+	text-align:center;
 }
 
 .collection h3{
