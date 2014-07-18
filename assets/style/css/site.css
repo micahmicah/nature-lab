@@ -1356,13 +1356,11 @@ body:after {
 .lightbox-open {
   overflow: hidden; }
 
-.logo {
-  font-family: times, serif;
-  font-size: 120px; }
-  @media only screen and (max-width: 767px) {
-    .logo {
-      font-size: 64px; } }
-
+/* 
+-------------------------------------------------
+GLOBAL TYPE STYLES
+-------------------------------------------------
+*/
 p, li, h1, h2, h3, h4, input {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
@@ -1384,19 +1382,6 @@ p strong {
   font-size: 12px;
   text-align: center; }
 
-.pull-quote h3 {
-  font-size: 72px;
-  line-height: 1em;
-  text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 0.5em 0em;
-  font-family: times, serif;
-  letter-spacing: -1px; }
-  @media only screen and (min-width: 1600px) {
-    .pull-quote h3 {
-      font-size: 96px; } }
-
 h2, h3 {
   font-family: times, serif;
   font-weight: normal; }
@@ -1415,10 +1400,50 @@ p .intro {
   font-style: normal;
   letter-spacing: 1px; }
 
-.headline {
-  font-size: 28px;
-  line-height: 1.33333em; }
+/* 
+-------------------------------------------------
+MAIN NAV TYPE STYLES
+-------------------------------------------------
+*/
+.logo {
+  font-family: times, serif;
+  font-size: 120px; }
+  @media only screen and (max-width: 767px) {
+    .logo {
+      font-size: 64px; } }
 
+/* 
+-------------------------------------------------
+PULL-QUOTES AND IMAGE BREAKS
+-------------------------------------------------
+*/
+.pull-quote h3 {
+  font-size: 72px;
+  line-height: 1em;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0em;
+  font-family: times, serif;
+  letter-spacing: -1px; }
+  @media only screen and (min-width: 1600px) {
+    .pull-quote h3 {
+      font-size: 96px; } }
+
+/* 
+-------------------------------------------------
+NEWS TICKER TYPE STYLES
+-------------------------------------------------
+*/
+.news-ticker-headline {
+  font-size: 32px;
+  line-height: 1.3333em; }
+
+/* 
+-------------------------------------------------
+NEWS PAGE TYPE STYLES
+-------------------------------------------------
+*/
 .news-meta-data ul {
   list-style: none;
   font-family: courier, monospace; }
@@ -1430,116 +1455,30 @@ p .intro {
 .news-headline {
   text-align: center; }
 
+/* 
+-------------------------------------------------
+COLLECTIONS & RESEARCH TYPE STYLES
+-------------------------------------------------
+*/
 .collection h3 {
   font-size: 48px; }
 
-/*
-// page structure
--------------------------------------------------------
+/* 
+-------------------------------------------------
+GLOBAL STYLES
+-------------------------------------------------
 */
-.flood {
-  width: 100%;
-  background: #f0f0f0;
-  z-index: 1;
-  margin: 10em 0em;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray; }
-
-.hero-image {
-  max-width: 100%;
-  height: 760px;
-  background: url("../../img/nature-lab-hero.jpg");
-  background-size: cover;
-  background-position: -0px -200px;
-  z-index: 1; }
-  @media only screen and (max-width: 959px) and (min-width: 768px) {
-    .hero-image {
-      background: url("../../img/nature-lab-header-02.jpg");
-      background-size: 1900px auto;
-      background-position: -600px -350px; } }
-  @media only screen and (min-height: 650px) {
-    .hero-image {
-      height: 650px;
-      background-position: -0px -220px; } }
-  @media only screen and (min-height: 800px) {
-    .hero-image {
-      height: 800px;
-      background-position: -0px -140px; }
-      .hero-image .logo {
-        top: 2em; } }
-  @media only screen and (min-height: 900px) {
-    .hero-image {
-      height: 900px;
-      background-size: cover; } }
-
-.hero-image {
-  position: relative;
-  z-index: 1; }
-
-.texture-specimens {
-  width: 100%; }
-
 .container {
   margin-top: 5em; }
 
-.logo {
-  position: absolute;
-  z-index: 2;
-  top: 1em;
-  text-align: center;
-  width: 100%;
-  text-shadow: 0px 0px 80px black;
-  color: white; }
+footer {
+  background: url("../../img/skull-footer.jpg");
+  height: 760px; }
 
-.logo .title {
-  display: inline-block;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-  padding: 0em 1em; }
-
-@media only screen and (max-width: 959px) and (min-width: 768px) {
-  .logo svg {
-    width: 500px;
-    height: 100px; } }
-@media only screen and (max-width: 500px) {
-  .logo svg {
-    width: 200px; } }
-@media only screen and (max-width: 767px) and (min-width: 480px) {
-  .logo svg {
-    width: 400px; } }
-
-.logo svg g path {
-  fill: white;
-  box-shadow: 0px 0px 80px black; }
-
-.logo .subtitle {
-  font-size: 24px;
-  font-family: courier, monospace;
-  letter-spacing: 0.125em;
-  font-weight: normal;
-  display: block;
-  text-shadow: 0px 0px 30px black;
-  text-transform: uppercase; }
-
-.news-author-portrait {
-  border-radius: 50%;
-  -webkit-filter: sepia(1) grayscale(0.6) contrast(0.7);
-  -moz-filter: sepia(1) grayscale(0.6) contrast(0.7); }
-
-.news-module {
-  text-align: center;
-  margin: 6em auto;
-  position: relative; }
-
-.news-module p {
-  color: white; }
-
-.news-story {
-  border-bottom: 1px dotted black; }
-
-/*
-// Main Navigation
--------------------------------------------------------
+/* 
+-------------------------------------------------
+MAIN NAV
+-------------------------------------------------
 */
 .main-nav {
   position: fixed;
@@ -1581,6 +1520,131 @@ p .intro {
 .main-nav .active {
   border-bottom: 3px solid black; }
 
+/* 
+-------------------------------------------------
+MAIN PAGE STYLES
+-------------------------------------------------
+*/
+.hero-image {
+  max-width: 100%;
+  height: 760px;
+  background: url("../../img/nature-lab-hero.jpg");
+  background-size: cover;
+  background-position: -0px -200px;
+  z-index: 1; }
+  @media only screen and (max-width: 959px) and (min-width: 768px) {
+    .hero-image {
+      background: url("../../img/nature-lab-header-02.jpg");
+      background-size: 1900px auto;
+      background-position: -600px -350px; } }
+  @media only screen and (min-height: 650px) {
+    .hero-image {
+      height: 650px;
+      background-position: -0px -220px; } }
+  @media only screen and (min-height: 800px) {
+    .hero-image {
+      height: 800px;
+      background-position: -0px -140px; }
+      .hero-image .logo {
+        top: 2em; } }
+  @media only screen and (min-height: 900px) {
+    .hero-image {
+      height: 900px;
+      background-size: cover; } }
+
+.hero-image {
+  position: relative;
+  z-index: 1; }
+
+.logo {
+  position: absolute;
+  z-index: 2;
+  top: 1em;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0px 0px 80px black;
+  color: white; }
+
+.logo .title {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  padding: 0em 1em; }
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  .logo svg {
+    width: 500px;
+    height: 100px; } }
+@media only screen and (max-width: 500px) {
+  .logo svg {
+    width: 200px; } }
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .logo svg {
+    width: 400px; } }
+
+.logo svg g path {
+  fill: white;
+  box-shadow: 0px 0px 80px black; }
+
+.logo .subtitle {
+  font-size: 24px;
+  font-family: courier, monospace;
+  letter-spacing: 0.125em;
+  font-weight: normal;
+  display: block;
+  text-shadow: 0px 0px 30px black;
+  text-transform: uppercase; }
+
+.texture-specimens {
+  width: 100%; }
+
+.flood {
+  width: 100%;
+  background: #f0f0f0;
+  z-index: 1;
+  margin: 10em 0em;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray; }
+
+/* 
+-------------------------------------------------
+NEWS TICKER
+-------------------------------------------------
+*/
+.news-ticker {
+  text-align: center;
+  margin: 6em auto;
+  position: relative;
+  width: 340px;
+  height: 340px; }
+
+.news-ticker:before {
+  content: "";
+  width: 320px;
+  height: 320px;
+  background: none;
+  display: block;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.news-ticker-headline {
+  padding: 1em;
+  padding-top: 3em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* 
+-------------------------------------------------
+PULL QUOTES
+-------------------------------------------------
+*/
 .pull-quote {
   background: url("../../img/fish_01.jpg") no-repeat right, url("../../img/fish_02.jpg") no-repeat left;
   background-size: 230px auto;
@@ -1622,9 +1686,10 @@ p .intro {
       height: 129px;
       margin: -97px auto 0px auto; } }
 
-/*
-// Collections
--------------------------------------------------------
+/* 
+-------------------------------------------------
+COLLECTIONS PAGE
+-------------------------------------------------
 */
 .large-specimen {
   max-width: 100%; }
@@ -1677,12 +1742,21 @@ p .intro {
 .moving-specimen, .moving-specimen source {
   width: 100%; }
 
-/*
-// News
--------------------------------------------------------
+/* 
+-------------------------------------------------
+NEWS PAGE
+-------------------------------------------------
 */
 .news-entry {
   margin: 6em 0em; }
+
+.news-author-portrait {
+  border-radius: 50%;
+  -webkit-filter: sepia(1) grayscale(0.6) contrast(0.7);
+  -moz-filter: sepia(1) grayscale(0.6) contrast(0.7); }
+
+.news-story {
+  border-bottom: 1px dotted black; }
 
 input[type=search] {
   border: 1px solid black;
@@ -1694,36 +1768,55 @@ input[type=search]:focus {
   outline-width: 0px;
   outline-style: none; }
 
-/*
-// Contact
--------------------------------------------------------
+/* 
+-------------------------------------------------
+CONTACT PAGE
+-------------------------------------------------
 */
 .contact p {
   text-indent: 0em; }
 
-/*
-// Footer
--------------------------------------------------------
+/* 
+-------------------------------------------------
+GLOBAL TYPE STYLES
+-------------------------------------------------
 */
-footer {
-  background: url("../../img/skull-footer.jpg");
-  height: 760px; }
-
-.news-module {
-  width: 340px;
-  height: 340px;
-  background: black;
-  border-radius: 50%; }
-
 body {
   background: #fcfcfc; }
 
+/* 
+-------------------------------------------------
+MAIN NAV STYLES
+-------------------------------------------------
+*/
 .main-nav {
   background: #fcfcfc; }
 
+/* 
+-------------------------------------------------
+MAIN PAGE STYLES
+-------------------------------------------------
+*/
+.news-ticker {
+  background: black;
+  border-radius: 50%; }
+
+.news-ticker-headline, .news-ticker-date {
+  color: white; }
+
+/* 
+-------------------------------------------------
+NEWS PAGE STYLES
+-------------------------------------------------
+*/
 .news-meta-data ul li {
   color: #646464; }
 
+/* 
+-------------------------------------------------
+COLLECTIONS PAGE STYLES
+-------------------------------------------------
+*/
 .collection {
   border-bottom: 1px solid black;
   margin-bottom: 10em; }

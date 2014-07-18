@@ -1,10 +1,9 @@
-.logo{
-	font-family:times, serif;
-	font-size:120px;
-	 @media only screen and (max-width: 767px) {
-	 	font-size:64px;
-	 }
-}
+
+/* 
+-------------------------------------------------
+GLOBAL TYPE STYLES
+-------------------------------------------------
+*/
 
 p, li, h1, h2, h3, h4, input{
 	-webkit-font-smoothing:antialiased;
@@ -31,24 +30,12 @@ p strong{
 	text-align:center;
 }
 
-.pull-quote h3{
-	font-size:72px;
-	line-height:1em;
-	text-align:center;
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	padding:0.5em 0em;
-	font-family:times, serif;
-	letter-spacing:-1px;
-	@media only screen and (min-width:1600px) {
-		font-size:96px;
-	}
-}
 
 h2,h3{
 	font-family:times, serif;
 	font-weight:normal;
 }
+
 
 p:first-child{
 	margin-bottom:0em;
@@ -68,10 +55,63 @@ p .intro{
 }
 
 
-.headline{
-	font-size:28px;
-	line-height:1.33333em;
+
+/* 
+-------------------------------------------------
+MAIN NAV TYPE STYLES
+-------------------------------------------------
+*/
+
+
+
+.logo{
+	font-family:times, serif;
+	font-size:120px;
+	 @media only screen and (max-width: 767px) {
+	 	font-size:64px;
+	 }
 }
+
+
+/* 
+-------------------------------------------------
+PULL-QUOTES AND IMAGE BREAKS
+-------------------------------------------------
+*/
+
+
+.pull-quote h3{
+	font-size:72px;
+	line-height:1em;
+	text-align:center;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	padding:0.5em 0em;
+	font-family:times, serif;
+	letter-spacing:-1px;
+	@media only screen and (min-width:1600px) {
+		font-size:96px;
+	}
+}
+
+/* 
+-------------------------------------------------
+NEWS TICKER TYPE STYLES
+-------------------------------------------------
+*/
+
+.news-ticker-headline{
+	font-size:32px;
+	line-height:1.3333em
+}
+
+
+
+/* 
+-------------------------------------------------
+NEWS PAGE TYPE STYLES
+-------------------------------------------------
+*/
 
 
 .news-meta-data ul{
@@ -88,6 +128,14 @@ p .intro{
 .news-headline{
 	text-align:center;
 }
+
+
+/* 
+-------------------------------------------------
+COLLECTIONS & RESEARCH TYPE STYLES
+-------------------------------------------------
+*/
+
 
 .collection h3{
 	font-size:48px;

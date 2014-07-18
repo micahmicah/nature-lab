@@ -1,21 +1,98 @@
 
 
-/*
-// page structure
--------------------------------------------------------
+/* 
+-------------------------------------------------
+GLOBAL STYLES
+-------------------------------------------------
 */
 
-// images
-.flood{
-	width:100%;
-	// max-height:760px;
-	background:rgb(240,240,240);
-	z-index:1;
-	margin:10em 0em;
-	border-top:1px solid gray;
-	border-bottom:1px solid gray;
+// - structure -----------------------------------
 
+.container{
+	margin-top:5em;
 }
+
+
+footer{
+	background:url('../../img/skull-footer.jpg');
+	height:760px;
+}
+
+/* 
+-------------------------------------------------
+MAIN NAV
+-------------------------------------------------
+*/
+
+// nav structure
+.main-nav{
+	position:fixed;
+	width:100%;
+	z-index:99;
+	top:0em;
+	-webkit-transition:top 0.3s ease-in-out;
+	-moz-transition:top 0.3s ease-in-out;
+	
+}
+
+// nav when hidden
+.nav-up{
+	top:-80px;
+}
+
+// nav when active
+.nav-down{
+	top:0em;
+}
+
+
+.main-nav .container{
+	margin-top:0em;
+}
+
+.main-nav h1{
+	margin-bottom:0em;
+}
+
+.main-nav h1, .main-nav ul, .main-nav ul li{
+	float:left;
+}
+
+.main-nav h1 svg{
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		width:150px;
+	}
+}
+
+.main-nav ul li{
+	margin-right:1em;
+}
+
+.main-nav ul{
+	margin-top:2em;
+}
+
+.main-nav a:link, .main-nav a:visited{
+	text-decoration:none;
+	color:black;
+}
+
+.main-nav .active{
+	border-bottom:3px solid black;
+}
+
+
+
+
+
+/* 
+-------------------------------------------------
+MAIN PAGE STYLES
+-------------------------------------------------
+*/
+
+
+// - begin hero image ---------------------------
 
 .hero-image{
 	max-width:100%;
@@ -55,22 +132,6 @@
 	z-index:1;
 	
 }
-
-
-.texture-specimens{
-	width:100%;
-	// height:455px;
-	// background:rgb(248, 250, 255);
-
-}
-
-
-.container{
-	margin-top:5em;
-}
-
-
-// logo intro
 
 .logo{
 	position:absolute;
@@ -125,98 +186,80 @@
 	text-transform:uppercase;
 }
 
-.news-author-portrait{
-	border-radius:50%;
-	-webkit-filter:sepia(1) grayscale(0.6) contrast(0.7);
-	-moz-filter:sepia(1) grayscale(0.6) contrast(0.7);
+// -- end hero image ---------------------
+
+
+.texture-specimens{
+	width:100%;
+
 }
 
-// news module
-.news-module{
+
+.flood{
+	width:100%;
+	background:rgb(240,240,240);
+	z-index:1;
+	margin:10em 0em;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+
+}
+
+// - end images --------------------------------------
+
+
+
+
+
+
+
+
+/* 
+-------------------------------------------------
+NEWS TICKER
+-------------------------------------------------
+*/
+
+.news-ticker{
 	text-align:center;
 	margin:6em auto;
 	position:relative;
+	width:340px;
+	height:340px;
 }
 
-.news-module p{
-	color:white;
-	
+.news-ticker:before{
+	content:"";
+	width:320px;
+	height:320px;
+	background:none;
+	display:block;
+	position:absolute;
+	border:2px solid white;
+	border-radius:50%;
+	left:10px;
+	top:10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-.news-story{
-	border-bottom:1px dotted black;
+
+.news-ticker-headline{
+	padding:1em;
+	padding-top:3em;
+	-webkit-box-sizing: border-box;
+  	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 
-
-.date{
-
-}
-
-
-
-
-/*
-// Main Navigation
--------------------------------------------------------
+/* 
+-------------------------------------------------
+PULL QUOTES
+-------------------------------------------------
 */
 
-.main-nav{
-	position:fixed;
-	width:100%;
-	z-index:99;
-	top:0em;
-	-webkit-transition:top 0.3s ease-in-out;
-	-moz-transition:top 0.3s ease-in-out;
-	
-}
-
-.nav-up{
-	top:-80px;
-}
-
-.nav-down{
-	top:0em;
-}
-
-
-.main-nav .container{
-	margin-top:0em;
-}
-
-.main-nav h1{
-	margin-bottom:0em;
-}
-.main-nav h1, .main-nav ul, .main-nav ul li{
-	float:left;
-}
-
-.main-nav h1 svg{
-	@media only screen and (max-width: 959px) and (min-width: 768px){
-		width:150px;
-	}
-}
-
-.main-nav ul li{
-	margin-right:1em;
-}
-
-.main-nav ul{
-	margin-top:2em;
-}
-
-.main-nav a:link, .main-nav a:visited{
-	text-decoration:none;
-	color:black;
-}
-
-.main-nav .active{
-	border-bottom:3px solid black;
-}
-
-
-
-// pull quote
 .pull-quote{
 	background:url('../../img/fish_01.jpg') no-repeat right,
 			   url('../../img/fish_02.jpg') no-repeat left;
@@ -228,9 +271,7 @@
 
 	@media only screen and (max-width: 767px) {
 		background:none;
-
-	}
-	
+	}	
 }
 
 .pull-quote:before{
@@ -248,9 +289,6 @@
 		height: 129px;
 		margin: 0px auto -176px auto;
 	}
-
-	
-
 }
 
 .pull-quote:after{
@@ -267,14 +305,14 @@
 		width: 250px;
 		height: 129px;
 		margin: -97px auto 0px auto;
-
 	}
 }
 
 
-/*
-// Collections
--------------------------------------------------------
+/* 
+-------------------------------------------------
+COLLECTIONS PAGE
+-------------------------------------------------
 */
 
 
@@ -294,7 +332,6 @@
 
 .item, .grid-sizer{
 	width:25%;
-	// border:1px solid red;
 }
 
 .item img{
@@ -348,15 +385,32 @@
 }
 
 
-/*
-// News
--------------------------------------------------------
+/* 
+-------------------------------------------------
+NEWS PAGE
+-------------------------------------------------
 */
+
 
 .news-entry{
 	margin:6em 0em;
 }
 
+
+.news-author-portrait{
+	border-radius:50%;
+	-webkit-filter:sepia(1) grayscale(0.6) contrast(0.7);
+	-moz-filter:sepia(1) grayscale(0.6) contrast(0.7);
+}
+
+
+
+.news-story{
+	border-bottom:1px dotted black;
+}
+
+
+// - begin input boxes & forms -----------------
 input[type=search]{
 	border:1px solid black;
 	padding:0.125em 0.25em;
@@ -370,25 +424,25 @@ input[type=search]:focus{
 	outline-style:none;
 }
 
-/*
-// Contact
--------------------------------------------------------
+// - end input boxes & forms -----------------
+
+
+
+/* 
+-------------------------------------------------
+CONTACT PAGE
+-------------------------------------------------
 */
+
 
 .contact p{
 	text-indent:0em;
 }
 
 
-/*
-// Footer
--------------------------------------------------------
-*/
 
 
-footer{
-	background:url('../../img/skull-footer.jpg');
-	height:760px;
-}
+
+
 
 
