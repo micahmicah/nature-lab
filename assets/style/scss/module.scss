@@ -129,6 +129,7 @@
 .author-portrait{
 	border-radius:50%;
 	-webkit-filter:sepia(1) grayscale(0.6) contrast(0.7);
+	-moz-filter:sepia(1) grayscale(0.6) contrast(0.7);
 }
 
 // news module
@@ -163,6 +164,7 @@
 	z-index:99;
 	top:0em;
 	-webkit-transition:top 0.3s ease-in-out;
+	-moz-transition:top 0.3s ease-in-out;
 	
 }
 
@@ -184,6 +186,12 @@
 }
 .main-nav h1, .main-nav ul, .main-nav ul li{
 	float:left;
+}
+
+.main-nav h1 svg{
+	@media only screen and (max-width: 959px) and (min-width: 768px){
+		width:150px;
+	}
 }
 
 .main-nav ul li{
