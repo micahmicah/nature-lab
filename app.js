@@ -7,7 +7,7 @@ var nconf = require('nconf');
 nconf.argv().env().file({ file: 'config.json' });
 
 options()
-    // .pipe(aggregate(nconf))
+    .pipe(aggregate(nconf))
     .pipe(database(dbDir))
     .pipe(distribute());
 
@@ -69,11 +69,9 @@ function aggregate (nconf) {
 
         var a = aggregator(opts);
         a.on('data', function (d) {
-                console.log('Data from aggregator');
                 self.push(d);
             })
             .on('end', function () {
-                console.log('Null from aggregator');
                 next();
             });
     }
