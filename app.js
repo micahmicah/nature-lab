@@ -7,7 +7,7 @@ var nconf = require('nconf');
 nconf.argv().env().file({ file: 'config.json' });
 
 options()
-    .pipe(aggregate(nconf))
+    // .pipe(aggregate(nconf))
     .pipe(database(dbDir))
     .pipe(distribute());
 

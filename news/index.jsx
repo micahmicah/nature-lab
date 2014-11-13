@@ -14,18 +14,20 @@ var NewsEntry = React.createClass({
         var tags = data.tags.map(function (d) {
             return (<span><a href="meta-link">{d}</a> </span>);
         });
+        var avatar = 'http://api.tumblr.com/v2/blog/' +
+            data.post_author + '.tumblr.com/avatar';
 
         return (<div className="news-entry ten columns offset-by-three">
-                <h2 className="news-headline">News Story</h2>
+                <h2 className="news-headline">{data.title}</h2>
                 <article className="news-story"
                     dangerouslySetInnerHTML={{__html: data.body}}>
                     
                 </article>
 
                 <div className="news-meta-data">
-                    <img className="news-author-portrait two columns" src="/static/img/neal.jpg" />
+                    <img className="news-author-portrait two columns" src={avatar} />
                     <ul>
-                        <li>posted by: <a className="meta-link" href="#">No post author exposed.</a></li>
+                        <li>posted by: <a className="meta-link" href="#">{data.post_author}</a></li>
                         <li>posted on: <a href="meta-link">{date}</a></li>
                         <li>filed under: {tags}</li>
                     </ul>
