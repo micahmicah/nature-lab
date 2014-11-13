@@ -1,6 +1,5 @@
-Includes go in this directory. For example `_includes/Footer.jsx` could look like this.
+var React = require('react');
 
-```JavaScript(JSX)
 module.exports = React.createClass({
     render: function () {
         return (<footer>
@@ -9,16 +8,7 @@ module.exports = React.createClass({
                 <p>Location: 13 Waterman Street, Providence RI 02903 Social:</p>
               </div>
            
-           </footer>
-
-           <script src="/static/script/bundle.js"></script>
-
-        </body>
-    </html>);
+           </footer>);
     }
 });
        
-
-```
-
-This is a React template.

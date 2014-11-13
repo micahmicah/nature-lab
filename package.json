@@ -6,25 +6,36 @@
   "dependencies": {
     "brfs": "^1.1.2",
     "browserify": "~4.1.7",
+    "bytewise": "^0.7.1",
     "catw": "~0.2.0",
+    "dataplex": "^3.0.2",
+    "ecstatic": "^0.5.6",
+    "findit": "^2.0.0",
     "hyperspace": "^1.1.0",
     "imagesloaded": "^3.1.8",
     "js-yaml": "~3.0.2",
-    "resolve-git-remote": "~0.1.1"
+    "level": "^0.18.0",
+    "moment": "^2.8.3",
+    "nconf": "^0.6.9",
+    "node-jsx": "^0.12.0",
+    "node-sass": "^1.2.2",
+    "nodemon": "^1.2.1",
+    "portfinder": "^0.2.1",
+    "react": "^0.12.0",
+    "resolve-git-remote": "~0.1.1",
+    "routes": "^1.2.0",
+    "stream-combiner2": "^1.0.2",
+    "through2": "^0.6.3",
+    "tumblr.js": "0.0.4"
   },
   "devDependencies": {
     "watchify": "~0.10.2",
     "portdiscovery": "~1.1.1"
   },
   "scripts": {
-    "watch-js-lib": "catw assets/js/src/lib/*.js -o assets/js/dist/lib.js -v",
-    "watch-js-src": "watchify -t brfs assets/js/src/index.js -o assets/js/dist/src.js -v",
-    "watch-js": "catw assets/js/dist/lib.js assets/js/dist/src.js -o assets/js/dist/site.js -v",
-    "build-js-lib": "cat assets/js/src/lib/*.js > assets/js/dist/lib.js",
-    "build-js-src": "browserify -t brfs assets/js/src/index.js > assets/js/dist/src.js",
-    "build-js": "npm run build-js-lib & npm run build-js-src & cat assets/js/dist/lib.js assets/js/dist/src.js > assets/js/dist/site.js",
-    "build": "npm run build-js",
-    "watch": "npm run watch-js"
+    "test": "tape test/",
+    "start": "nodemon app.js localhost 4010",
+    "buld": "echo Wouldn't that be nice."
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,2 @@
 node_modules/*
-.env
-_site
-.sass-cache/*
+config.json
