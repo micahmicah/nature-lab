@@ -14,7 +14,7 @@ GLOBAL STYLES
 
 
 footer{
-	background:url('../../img/skull-footer.jpg');
+	background:url('/static/img/skull-footer.jpg');
 	height:760px;
 }
 
@@ -97,13 +97,13 @@ MAIN PAGE STYLES
 .hero-image{
 	max-width:100%;
 	height:760px;
-	background:url('../../img/nature-lab-hero.jpg');
+	background:url('/static/img/nature-lab-hero.jpg');
 	background-size:cover;
 	background-position:-0px -200px;
 	// background:rgb(240,240,240);
 	z-index:1;
 	@media only screen and (max-width: 959px) and (min-width: 768px){
-		background:url('../../img/nature-lab-header-02.jpg');
+		background:url('/static/img/nature-lab-header-02.jpg');
 		background-size:1900px auto;
 		background-position:-600px -350px;
 
@@ -261,8 +261,8 @@ PULL QUOTES
 */
 
 .pull-quote{
-	background:url('../../img/fish_01.jpg') no-repeat right,
-			   url('../../img/fish_02.jpg') no-repeat left;
+	background:url('/static/img/fish_01.jpg') no-repeat right,
+			   url('/static/img/fish_02.jpg') no-repeat left;
    background-size:230px auto;
    margin:10em auto;
    @media only screen and (min-width:1600px) {
@@ -276,7 +276,7 @@ PULL QUOTES
 
 .pull-quote:before{
 	content:"";
-	background:url('../../img/orb-01.jpg');
+	background:url('/static/img/orb-01.jpg');
 	display:block;
 	background-size:180px auto;
 	width:170px;
@@ -293,7 +293,7 @@ PULL QUOTES
 
 .pull-quote:after{
 	content:"";
-	background:url('../../img/orb-02.jpg');
+	background:url('/static/img/orb-02.jpg');
 	display:block;
 	background-size:180px auto;
 	width:170px;

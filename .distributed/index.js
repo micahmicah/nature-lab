@@ -7,7 +7,8 @@ function Distributed (opts) {
     var db = opts.db;
 
     var ecstatic = require('ecstatic')
-                          (opts.rootDir + '/static');
+                          ({ root: opts.rootDir + '/static',
+                             baseDir: '/static' });
 
     var dataplex = require('./data.js');
     var router = require('./router.js')
