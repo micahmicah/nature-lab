@@ -15,16 +15,6 @@ function sourceUrls () {
                 title: "Nature Lab News",
                 slug: "nature-lab-news"
             }
-        }, {
-            url: "naturelabnews.tumblr.com",
-            platform: {
-                type: "tumblr",
-                url: "naturelabnews.tumblr.com"
-            },
-            description: {
-                title: "Nature Lab News",
-                slug: "naturelabnews"
-            }
         }];
 
     self.asStream = asStream;

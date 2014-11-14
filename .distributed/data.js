@@ -16,7 +16,7 @@ module.exports = function (db) {
 
         var perPage = 1;
         
-        var page = parseInt(opts.page, 10) || 0;
+        var page = parseInt(opts.page, 10) || 1;
         var offset = perPage * (page - 1);
         
         var total = 1;
@@ -32,8 +32,8 @@ module.exports = function (db) {
         }
 
         return db.createReadStream({
-            start: 'published!' + opts.source + '!',
-            end: 'published!' + opts.source + '!\uffff'
+            start: 'published!nature-lab-news!',
+            end: 'published!nature-lab-news!\uffff'
         }).pipe(through.obj(function (row, enc, next) {
 
             if ((total > offset) &&
@@ -73,8 +73,8 @@ module.exports = function (db) {
         opts.post = parseInt(opts.post, 10);
 
         return db.createReadStream({
-            start: 'published!' + opts.source + '!',
-            end: 'published!' + opts.source + '!\uffff'
+            start: 'published!nature-lab-news!',
+            end: 'published!nature-lab-news!\uffff'
         }).pipe(through.obj(function (row, enc, next) {
             if (opts.post === row.value.id) {
                 row.value.type = "news";
