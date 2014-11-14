@@ -14,12 +14,72 @@ module.exports = function (db) {
         /* Return all sources of content
            for a given platform. */
 
+        var perPage = 1;
+        
+        var page = parseInt(opts.page, 10) || 0;
+        var offset = perPage * (page - 1);
+        
+        var total = 1;
+
+        var prevPage = page - 1;
+        var nextPage = page + 1;
+        
+        var prev = true;
+        var next = false;
+
+        if (page === 1) {
+            prev = false;
+        }
+
         return db.createReadStream({
             start: 'published!' + opts.source + '!',
             end: 'published!' + opts.source + '!\uffff'
         }).pipe(through.obj(function (row, enc, next) {
-            row.value.type = 'news';
-            this.push(row.value);
+
+            if ((total > offset) &&
+                (total <= (offset + perPage))) {
+
+                row.value.type = 'news';
+                this.push(row.value);
+            }
+            
+            total += 1;
+            next();
+
+        }, function () {
+
+            if ((total - 1) > (offset + perPage)) {
+                next = true;
+            }
+
+            this.push({
+                type: 'pagination',
+                next: next,
+                prev: prev,
+                page: page,
+                prevPage: prevPage,
+                nextPage: nextPage
+            });
+
+            this.push(null);
+        }));
+    });
+
+    plex.add('/news/post', function (opts) {
+        if (!('post' in opts)) {
+            throw new Error('Requires post id');
+        }
+
+        opts.post = parseInt(opts.post, 10);
+
+        return db.createReadStream({
+            start: 'published!' + opts.source + '!',
+            end: 'published!' + opts.source + '!\uffff'
+        }).pipe(through.obj(function (row, enc, next) {
+            if (opts.post === row.value.id) {
+                row.value.type = "news";
+                this.push(row.value);
+            }
             next();
         }));
     });

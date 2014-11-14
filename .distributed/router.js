@@ -52,9 +52,52 @@ module.exports = function (opts) {
         var p = templates().pipe(mapUrlTemplate(m));
 
         /* Data stream */
+        m.params.page = 1;
         m.params.source = 'nature-lab-news';
         var d = plex.open(
             '/news', m.params);
+
+        /* Compilation stream */
+        var c = compilePage(p, d);
+
+        c.pipe(stringify()).pipe(res);
+    });
+
+    router.addRoute('/news/page/:page', function (req, res, m) {
+        
+        var i = findChar(2)(req.url, '/');
+        m.url = req.url.substring(0, i+1);
+        
+        res.setHeader('content-type', 'text/html');
+
+        /* pagePath stream */
+        var p = templates().pipe(mapUrlTemplate(m));
+
+        /* Data stream */
+        m.params.source = 'nature-lab-news';
+        var d = plex.open(
+            '/news', m.params);
+
+        /* Compilation stream */
+        var c = compilePage(p, d);
+
+        c.pipe(stringify()).pipe(res);
+    });
+
+    router.addRoute('/news/post/:slug/:post', function (req, res, m) {
+        
+        var i = findChar(2)(req.url, '/');
+        m.url = req.url.substring(0, i+1);
+        
+        res.setHeader('content-type', 'text/html');
+
+        /* pagePath stream */
+        var p = templates().pipe(mapUrlTemplate(m));
+
+        /* Data stream */
+        m.params.source = 'nature-lab-news';
+        var d = plex.open(
+            '/news/post', m.params);
 
         /* Compilation stream */
         var c = compilePage(p, d);

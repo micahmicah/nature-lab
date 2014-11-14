@@ -409,6 +409,12 @@ NEWS PAGE
 	border-bottom:1px dotted black;
 }
 
+.news-pagination {
+	.hidden {
+		display: none;
+	}
+}
+
 
 // - begin input boxes & forms -----------------
 input[type=search]{

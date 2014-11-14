@@ -6,6 +6,27 @@ var Nav = require('_includes/Nav.jsx');
 
 var moment = require('moment');
 
+var Pagination = React.createClass({
+    render: function () {
+        var data = this.props.data;
+        
+        var prevClass = data.prev ? '' : 'hidden';
+        var prevLink = "/news/page/" + data.prevPage;
+
+        var nextClass = data.next ? '' : 'hidden';
+        var nextLink = "/news/page/" + data.nextPage;
+
+        return (
+            <div className="news-pagination ten columns offset-by-three">
+                <p><a href={prevLink}
+                       className={prevClass}
+                       >Previous</a></p>
+                <p><a href={nextLink}
+                      className={nextClass}>Next</a></p>
+            </div>);
+    }
+});
+
 var NewsEntry = React.createClass({
     render: function () {
         var data = this.props.data;
@@ -17,8 +38,10 @@ var NewsEntry = React.createClass({
         var avatar = 'http://api.tumblr.com/v2/blog/' +
             data.post_author + '.tumblr.com/avatar';
 
+        var link = '/news/post/' + data.slug + '/' + data.id;
+
         return (<div className="news-entry ten columns offset-by-three">
-                <h2 className="news-headline">{data.title}</h2>
+                <h2 className="news-headline"><a href={link}>{data.title}</a></h2>
                 <article className="news-story"
                     dangerouslySetInnerHTML={{__html: data.body}}>
                     
@@ -54,6 +77,13 @@ module.exports = React.createClass({
                 return (<NewsEntry data={d} />);
             });
 
+        var pagination = data.filter(function (d) {
+                return d.type === 'pagination';
+            })
+            .map(function (d) {
+                return (<Pagination data={d} />);
+            });
+
         return (<html>
             <Top />
             <body>
@@ -66,6 +96,7 @@ module.exports = React.createClass({
                 	</div>
 
                 	{news}
+                    {pagination}
                 </div>
 
                 <Footer />

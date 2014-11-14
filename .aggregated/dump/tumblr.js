@@ -6,7 +6,7 @@ module.exports = {
         if ('published' in d) {
             return 'published!' +
                    d.published.agmetadata.description.slug + '!' +
-                   d.published.post_url;
+                   d.published.id;
         } else if ('subscribed' in d) {
             return 'subscribed!tumblr!' +
                    d.subscribed.description.slug;
