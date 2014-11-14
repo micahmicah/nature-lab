@@ -226,7 +226,7 @@ module.exports = React.createClass({
 
 		return (<html>
 			<Top />
-			<body>
+			<body className="section-collections">
 				<Nav url={url}/>
 				<IntroPullQuote />
 

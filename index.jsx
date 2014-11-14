@@ -12,6 +12,7 @@ var PullQuote = require('_includes/homepage/pullQuote.jsx');
 var FloodTanks = require('_includes/homepage/imageFloodTanks.jsx');
 var Variety = require('_includes/homepage/extendedVariety.jsx');
 var Collage = require('_includes/homepage/collage.jsx');
+var FloodBoneRoom = require('_includes/homepage/imageFloodBoneRoom.jsx');
 var Contrary = require('_includes/homepage/extendedContrary.jsx');
 var FloodMicroscopeRoom = require('_includes/homepage/imageFloodMicroscopeRoom.jsx');
 
@@ -30,7 +31,7 @@ module.exports = React.createClass({
 
 		return (<html>
 			<Top />
-			<body>
+			<body className="section-index">
 				<Nav url={url}/>
 
 				<Intro />
@@ -41,8 +42,10 @@ module.exports = React.createClass({
 				<FloodTanks />
 				<Variety />
 				<Collage />
+				<FloodBoneRoom />
 				<Contrary />
 				<FloodMicroscopeRoom />
+				<Footer />
 			</body>
 			<Script />
 			</html>);

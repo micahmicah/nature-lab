@@ -17,7 +17,7 @@ module.exports = React.createClass({
 
         return (<html>
             <Top />
-            <body>
+            <body className="section-contact">
                 <Nav url={url}/>
                 
                 <div className="container contact">

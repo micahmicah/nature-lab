@@ -32,6 +32,13 @@ var NewsEntry = React.createClass({
         var data = this.props.data;
         var date = moment(data.date)
             .format("MMMM D YYYY");
+        var author = data.post_author
+            .split('-')
+            .map(function (d) {
+                return d.substring(0, 1).toUpperCase() +
+                       d.substring(1, d.length);
+            })
+            .join(' ');
         var tags = data.tags.map(function (d) {
             return (<span><a href="meta-link">{d}</a> </span>);
         });
@@ -50,7 +57,7 @@ var NewsEntry = React.createClass({
                 <div className="news-meta-data">
                     <img className="news-author-portrait two columns" src={avatar} />
                     <ul>
-                        <li>posted by: <a className="meta-link" href="#">{data.post_author}</a></li>
+                        <li>posted by: <a className="meta-link" href="#">{author}</a></li>
                         <li>posted on: <a href="meta-link">{date}</a></li>
                         <li>filed under: {tags}</li>
                     </ul>
@@ -86,7 +93,7 @@ module.exports = React.createClass({
 
         return (<html>
             <Top />
-            <body>
+            <body className="section-news">
                 <Nav url={url}/>
                 
                 <div className="container">
