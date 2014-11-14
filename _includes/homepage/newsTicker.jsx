@@ -1,16 +1,33 @@
 var React = require('react');
 
+var moment = require('moment');
+
+var Item = React.createClass({
+    render: function () {
+        var data = this.props.data;
+        var date = moment(data.date)
+            .format("MMMM YYYY");
+        return (
+            <div className="six columns offset-by-five">
+               <div className="news-ticker">
+                   <p className="news-ticker-headline">{data.title}</p>
+                   <p className="news-ticker-date">{date}</p>
+               </div>
+           </div>);
+    }
+})
+
 module.exports = React.createClass({
     render: function () {
+        var data = this.props.data;
+        var items = data.map(function (d) {
+            return (<Item data={d} />);
+        });
+
         return (
        <div className="history">
            <section className="container">
-               <div className="six columns offset-by-five">
-                   <div className="news-ticker">
-                       <p className="news-ticker-headline">RISD hosting SURF undergrad research fellows</p>
-                       <p className="news-ticker-date">June 2014</p>
-                   </div>
-               </div>
+               {items}
        
                <div className="ten columns offset-by-three">
                    <p>

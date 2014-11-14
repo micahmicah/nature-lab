@@ -14,7 +14,7 @@ module.exports = function (db) {
         /* Return all sources of content
            for a given platform. */
 
-        var perPage = 1;
+        var perPage = opts.perPage || 10;
         
         var page = parseInt(opts.page, 10) || 1;
         var offset = perPage * (page - 1);
@@ -85,12 +85,18 @@ module.exports = function (db) {
     });
 
     plex.add('/news/ticker', function (opts) {
-        
+        if (!opts) opts = {};
+
+        opts.perPage = 3;
+        opts.page = 1;
+
         return plex.open('/news', opts)
             .pipe(through.obj(function (row, enc, next) {
-                // row.agmetadata.ticker
-                // row.tags
-                this.push(row);
+                if (row.type === 'news') {
+                    row.type = "newsTickerItem";
+                    this.push(row);
+                }
+
                 next();
             }));
     });

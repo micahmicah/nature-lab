@@ -32,7 +32,7 @@ module.exports = function (opts) {
         res.setHeader('content-type', 'text/html');
 
         /* Data stream */
-        var d = plex.open('/nodata');
+        var d = plex.open('/news/ticker');
 
         /* pagePath stream */
         var p = templates().pipe(mapUrlTemplate(m));

@@ -29,13 +29,17 @@ module.exports = React.createClass({
 			})
 			.pop();
 
+		var newsTickerItems = data.filter(function (d) {
+				return d.type === 'newsTickerItem';
+			});
+
 		return (<html>
 			<Top />
 			<body className="section-index">
 				<Nav url={url}/>
 
 				<Intro />
-				<NewsTicker />
+				<NewsTicker data={newsTickerItems}/>
 				<FloodMicroscope />
 				<ExtendedIntro />
 				<PullQuote />
