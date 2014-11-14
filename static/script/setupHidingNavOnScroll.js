@@ -58,9 +58,10 @@ module.exports = function SetupHidingNavOnScroll () {
                 $(selector).removeClass(state_showing).addClass(state_hiding);
             } else {
                 // Scroll Up
-                if(st + $(window).height() < $(document).height()) {
-                    $(selector).removeClass(state_hiding).addClass(state_showing);
-                }
+                // if(st + $(window).height() < $(document).height()) {
+                //     $(selector).removeClass(state_hiding).addClass(state_showing);
+                // }
+                $(selector).removeClass(state_hiding).addClass(state_showing);
             }
             
             lastScrollTop = st;
