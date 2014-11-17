@@ -26,6 +26,8 @@ function TumblrClient (opts) {
         return p;
     };
 
+    client.key = require('./key.js');
+
     return client;
 
     function posts () {

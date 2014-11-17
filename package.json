@@ -34,7 +34,7 @@
   },
   "scripts": {
     "test": "tape test/",
-    "start": "nodemon app.js localhost 4010",
+    "start": "nodemon app.js localhost",
     "buld": "echo Wouldn't that be nice."
   },
   "repository": {

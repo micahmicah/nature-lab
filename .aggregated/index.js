@@ -14,36 +14,23 @@ function aggregated (opts) {
        is done. */
     var t = through.obj();
 
-    /* Anticipate the array of names to
-       be written out, and when they are
-       push null into the stream, which
-       closes it, and notifies the system
-       that aggregating is done. */
-    var watcher = streamWatcher([
-        'tumblr.json'],
-        function () {
-            console.log('Aggregated: Finished');
-            t.push(opts);
-            t.push(null);
-        });
-
-    /* Wrap fs.createWriteStream in order
-       to know when a write is complete.
-       Takes a watcher instances so that it
-       can remove the name of the file that
-       has been passed in when that file is
-       done being written */
-    var dump = dumper(watcher);
-
     var tmblr = Tumblr(opts.tumblr);
 
-    tmblr.retrieve()
-        .pipe(stringify())
-        .pipe(dump('tumblr.json'));
+    t.push(opts);
+    t.push(null);
+
+    fetch();
+    setInterval(function () {
+        fetch();
+    }, 60000);
 
 
     return t;
 
+    function fetch () {
+        return tmblr.retrieve()
+            .pipe(write(tmblr.key, opts.db));
+    }
 }
 
 
@@ -69,29 +56,15 @@ function streamWatcher (expects, finish) {
     };
 }
 
-function dumper (watcher) {
-    return function (name) {
-        // console.log('Aggregator: Write start: ', name);
-        var w = fs.createWriteStream(
-                    __dirname + '/dump/' + name,
-                    { encoding: 'utf8'});
-
-        return through.obj(write, end);
-
-        function write (row, enc, next) {
-            w.write(row);
-            next();
-        }
-
-        function end () {
-            console.log('Aggregator: Write finished: ', name);
-            w.end();
-            watcher(name);
-            this.push({
-                file: name,
-                statue: 'Written.'
-            });
-            this.push(null);
-        }
-    };
+function write (key, db) {
+    return through.obj(function (row, enc, next) {
+        console.log('writing');
+        console.log(row);
+        var kv = { type: 'put' };
+        kv.key = key(row);
+        kv.value = row[row.type];
+        kv.value.type = row.type;
+        db.put(kv.key, kv.value);
+        next();
+    });
 }
